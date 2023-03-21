@@ -1,0 +1,59 @@
+<figure class="container">
+    <p>
+        <span>stay</span>
+        <span>hungry</span>
+    </p>
+
+    <p>
+        <span>hungry</span>
+        <span>stay</span>
+    </p>
+    <p>
+        <span>stay</span>
+        <span>foolish</span>
+    </p>
+</figure>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+    }
+    .container {
+        outline: 1px dashed lime;
+        transform: skewY(-30deg);
+    }
+
+    .container p {
+        color: white;
+        font-size: 100px;
+        font-family: sans-serif;
+        font-family: bold;
+        text-transform: uppercase;
+        line-height: 1em;
+        margin: 0;
+        outline: 1px dashed lime;
+        height: 1em;
+        overflow: hidden;
+    }
+    .container p:nth-child(odd) {
+        transform: skewX(45deg);
+    }
+    .container p:nth-child(2) { margin-left: 1em;}
+    .container p:nth-child(3) { margin-left: 2em;}
+    .container p span {
+        display: block;
+        text-align: center;
+        animation: lettering 3s infinite ease-in-out alternate;
+    }
+
+    @keyframes lettering {
+        to {
+            transform: translateY(-100%)
+        }
+    }
+</style>

@@ -1,0 +1,31 @@
+
+
+<figure class="seasons">
+	<div>spring</div>
+	<div>summer</div>
+	<div>fall</div>
+	<div>winter</div>
+</figure>
+<style>
+	.seasons {
+    width: 20em;
+    height: 20em;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0.2em;
+}
+.seasons div {
+    border: 0.1em solid gray;
+    text-align: center;
+    line-height: 6em;
+    font-size: 1.5em;
+    color: black;
+}
+.seasons div:nth-child(3) {
+	order: 4;
+}
+.seasons div:nth-child(1) {
+	border-radius: 100% 20%  0 0;
+}
+</style>

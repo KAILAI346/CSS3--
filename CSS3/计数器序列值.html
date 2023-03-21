@@ -1,0 +1,45 @@
+<figure class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</figure>
+
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+        counter-reset: n  ;
+    }
+    .container div {
+        width: 3em;
+        height: 3em;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: relative;
+        counter-increment: n;
+    }
+
+    .container div::before {
+        content: counter(n,var(--list-type));
+        position: absolute;
+        font-size: 1.5em;
+        font-family: sans-serif;
+        width: inherit;
+        line-height: 2em;
+        text-align: center;
+        color: white;
+    }
+    .container:nth-child(1) { --list-type:upper-roman}
+    .container:nth-child(2) { --list-type:trad-chinese-formal;}
+    .container:nth-child(3) { --list-type:trad-chinese-informal}
+    .container:nth-child(4) { --list-type:hiragana}
+    .container:nth-child(5) { --list-type:korean-hangul-formal}
+</style>

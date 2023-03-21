@@ -1,0 +1,36 @@
+<div></div>
+
+<style>
+    div,
+    div::before,
+    div::after {
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;
+    }
+
+    div {
+        font-size: 10px;
+        margin: 4em;
+        position: relative;
+        background-color: lightgreen;
+
+    }
+
+    div::before,
+    div::after {
+        content: '';
+        position: absolute;
+        top: 5em;
+    }
+    div::before { background-color: moccasin;}
+    div::after { background-color: orange;}
+    div::before {right: 3em;}
+    div::after { left:3em}
+
+    /* 更改默认次序 */
+    div {z-index: auto;}
+    div::before { z-index: -1;}
+    div::after { z-index: -2;}
+    /* 主元素和伪元素不是同级关系，无法对比。如果对它的z-index设置值，则无论值为何，都会让主元素出于最下方 */
+</style>
